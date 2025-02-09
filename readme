@@ -1,0 +1,44 @@
+🛠 Setup Environment
+ [C] => Install Docker & Docker Compose if not installed
+ [C] => Create a project folder (code-executor/)
+ [C] => Inside the folder, create two subfolders:
+ [C] => backend/ (Primary Backend API)
+ [C] => worker/ (Worker to process code execution)
+
+📦 Setup Docker Services
+ [C] => Create a docker-compose.yml file
+ [C] => Add Redis service
+ [C] => run the mongo db locally 
+ [C] => Add all dependencies inside a primary backend folder. express, ioredis, bullmq, cors, dotenv, body-parser, mongoose
+ [C] => Add all the dependecies in worker. io redis, bullmq, dotenv, mongoose to interact with mongo db
+ [C] => Create a .env file at root level to store MongoDB & Redis URLs
+
+
+ things todo in backend folder 
+ [C] => create a server using express and run it on localhost 5000 use a env port and on "/" send the message hello
+ [C] => make a mongo db connection using mongoose 
+ [C] => make a redis connection using ioredis lib
+ [C] => create a model for problem submission using mongoose lib
+ [C] => test the model using dummy data from post man
+ [C] => create a queue connection using redis  
+ [C] => add a problem to a queue
+ [C] => make sure the problem is adding correctly to queue
+ 
+ things todo inside worker 
+ [C] => create a console.log('hi') inside a src/index.ts
+ [C] => make a connection to redis
+ [C] => create a connection to bullmq
+ [C] => next step is to pick the problem from the queue
+ [C] => import the vm to process the code
+ [C] => test the vm process 
+ [C] => add a mongoose connection on index.ts
+ [C] => create a problem model and import to index.ts
+ [C] => update the vm solution to db 
+
+
+things to do in client:
+ [C] => create a react app under client folder and make sure its running on localhost 3000
+ [C] => create a component called SubmitProblem which will have the code editor interface where user can write the js code. 
+ [C] => make an api call to our primary backend
+
+ 
